@@ -16,6 +16,7 @@ class SearchBar extends Component{
     render () {
 
         return <div>
+            <p>Search</p>
             <input
                 type='text'
                 className="input"
@@ -23,7 +24,8 @@ class SearchBar extends Component{
                 value={this.state.input}
                 onChange={this.handleChange}
             />
-
+            <br />
+            <input type="checkbox" />  <label >Only show products in stock</label>
         </div>
     }
 }

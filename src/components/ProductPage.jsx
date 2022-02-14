@@ -4,12 +4,18 @@ import SearchBar from './SearchBar';
 import jsonData from '../data.json';
 
 function ProductsPage () {
-  const [products, setProducts] = useState(jsonData);
+    const [products, setProducts] = useState(jsonData);
+    let filtered = [...products];
 
   const filterProducts = (input) => {
-    const filtered = products.filter((product) => product.name.toLocaleLowerCase().includes(input.toLocaleLowerCase()))
+    filtered = products.filter((product) => product.name.toLocaleLowerCase().includes(input.toLocaleLowerCase()))
     setProducts(filtered);
+    console.log('Total products: ' + products);
+    console.log('filter products: ' + filtered);
+
+
   }
+
   return(
       <div>
         <h1>IronStore</h1>
